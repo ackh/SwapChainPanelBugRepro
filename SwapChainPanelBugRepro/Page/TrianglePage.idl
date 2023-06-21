@@ -1,0 +1,8 @@
+namespace SwapChainPanelBugRepro
+{
+  [default_interface]
+  runtimeclass TrianglePage : Microsoft.UI.Xaml.Controls.Page
+  {
+    TrianglePage();
+  }
+}

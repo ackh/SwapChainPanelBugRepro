@@ -1,0 +1,11 @@
+import "BaseView.idl";
+
+
+namespace SwapChainPanelBugRepro
+{
+  [default_interface]
+  runtimeclass TriangleView : BaseView
+  {
+    TriangleView();
+  }
+}

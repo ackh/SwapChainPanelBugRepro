@@ -1,0 +1,130 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Assets">
+      <UniqueIdentifier>{7f5b9843-d5fb-43f2-8966-793064900cb6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Page">
+      <UniqueIdentifier>{6badc9d7-4508-4237-9df9-c04f231add3f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Renderer">
+      <UniqueIdentifier>{04da456e-9d07-434b-9f8a-85b2434f21ab}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Shader">
+      <UniqueIdentifier>{1fd25b04-8e88-44fb-b97e-9a361c639c5e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Vertex">
+      <UniqueIdentifier>{9c52c617-3b01-4ae1-8ca3-2b741e28c8cb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="View">
+      <UniqueIdentifier>{dfb87df8-985d-4748-a5d2-c1eecf20633e}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <Manifest Include="app.manifest" />
+  </ItemGroup>
+  <ItemGroup>
+    <AppxManifest Include="Package.appxmanifest" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="MainWindow.xaml" />
+    <Page Include="Page\SquarePage.xaml">
+      <Filter>Page</Filter>
+    </Page>
+    <Page Include="Page\TrianglePage.xaml">
+      <Filter>Page</Filter>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Midl Include="App.idl" />
+    <Midl Include="MainWindow.idl" />
+    <Midl Include="Page\SquarePage.idl" />
+    <Midl Include="Page\TrianglePage.idl" />
+    <Midl Include="View\BaseView.idl">
+      <Filter>View</Filter>
+    </Midl>
+    <Midl Include="View\SquareView.idl">
+      <Filter>View</Filter>
+    </Midl>
+    <Midl Include="View\TriangleView.idl">
+      <Filter>View</Filter>
+    </Midl>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="pch.h" />
+    <ClInclude Include="Renderer\SquareRenderer.h">
+      <Filter>Renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="Renderer\TriangleRenderer.h">
+      <Filter>Renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="Vertex\Vertex.h">
+      <Filter>Vertex</Filter>
+    </ClInclude>
+    <ClInclude Include="View\BaseView.h">
+      <Filter>View</Filter>
+    </ClInclude>
+    <ClInclude Include="View\SquareView.h">
+      <Filter>View</Filter>
+    </ClInclude>
+    <ClInclude Include="View\TriangleView.h">
+      <Filter>View</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="$(GeneratedFilesDir)module.g.cpp" />
+    <ClCompile Include="pch.cpp" />
+    <ClCompile Include="Renderer\SquareRenderer.cpp">
+      <Filter>Renderer</Filter>
+    </ClCompile>
+    <ClCompile Include="Renderer\TriangleRenderer.cpp">
+      <Filter>Renderer</Filter>
+    </ClCompile>
+    <ClCompile Include="View\BaseView.cpp">
+      <Filter>View</Filter>
+    </ClCompile>
+    <ClCompile Include="View\SquareView.cpp">
+      <Filter>View</Filter>
+    </ClCompile>
+    <ClCompile Include="View\TriangleView.cpp">
+      <Filter>View</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shader\PixelShader.hlsl">
+      <Filter>Shader</Filter>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shader\VertexShader.hlsl">
+      <Filter>Shader</Filter>
+    </FxCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="Assets\LockScreenLogo.scale-200.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\SplashScreen.scale-200.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\Square44x44Logo.scale-200.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\Square44x44Logo.targetsize-24_altform-unplated.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\Square150x150Logo.scale-200.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\StoreLogo.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\Wide310x150Logo.scale-200.png">
+      <Filter>Assets</Filter>
+    </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+</Project>

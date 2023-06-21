@@ -1,0 +1,6 @@
+namespace SwapChainPanelBugRepro
+{
+  unsealed runtimeclass BaseView : Microsoft.UI.Xaml.Controls.SwapChainPanel
+  {
+  }
+}

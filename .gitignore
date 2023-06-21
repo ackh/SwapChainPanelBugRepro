@@ -1,0 +1,20 @@
+﻿################################################################################
+# Prevents specific files and folders from being added to Git.
+################################################################################
+
+/.vs
+/bin
+/packages
+/SwapChainPanelBugRepro/Generated Files
+/SwapChainPanelBugRepro/obj
+
+
+################################################################################
+# Prevents files with the below listed file extensions from being added to Git.
+################################################################################
+
+*.db
+*.opendb
+*.user
+*.suo
+*.payload.desc

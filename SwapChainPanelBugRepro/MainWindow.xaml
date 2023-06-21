@@ -1,0 +1,24 @@
+﻿<Window
+  xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+  xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+  xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+  xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+  x:Class="SwapChainPanelBugRepro.MainWindow"
+  mc:Ignorable="d">
+
+  <NavigationView
+    Background="White"
+    PaneDisplayMode="Top"
+    IsBackButtonVisible="Collapsed"
+    IsBackEnabled="False"
+    IsSettingsVisible="False"
+    Loaded="OnLoaded"
+    SelectionChanged="OnSelectionChanged">
+    <NavigationView.MenuItems>
+      <NavigationViewItem Content="Triangle View" Tag="TrianglePage"/>
+      <NavigationViewItem Content="Square View" Tag="SquarePage"/>
+    </NavigationView.MenuItems>
+    <Frame/>
+  </NavigationView>
+
+</Window>

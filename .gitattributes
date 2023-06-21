@@ -1,0 +1,64 @@
+################################################################################
+# Git automatically determines whether it deals with text or binary files. If it
+# determines that a file is a text file it will convert all line endings of that
+# file to be just single LF (line feed) characters before committing the file.
+# This behaviour can be altered by providing more specific instructions for
+# files after the below statement.
+################################################################################
+
+* text=auto
+
+
+################################################################################
+# Files interpreted by the Windows cmd.exe shall be treated as text files which
+# means their line endings are converted to just LF instead of CRLF when such a
+# file is committed. If the file is written out to the working directory the
+# line endings are always converted to CRLF.
+################################################################################
+
+*.bat text eol=crlf
+*.cmd text eol=crlf
+
+
+################################################################################
+# Visual Studio project and solution files shall be treated as text files which
+# means that their line endings are converted to just LF instead of CRLF when
+# such files are committed. To prevent issues with Visual Studio, the line
+# endings of those files are always converted to CRLF once the files are written
+# out to the working directory, regardless of the operating system on which this
+# happens.
+################################################################################
+
+*.props    text eol=crlf
+*.sln      text eol=crlf
+*.vcxitems text eol=crlf
+*.vcxproj  text eol=crlf
+
+
+################################################################################
+# Treat the following files as text files which means that their line endings
+# are converted to just LF instead of CRLF when such a file is committed. If the
+# file is written out to the working directory the line endings are converted to
+# the default line ending of the platform.
+################################################################################
+
+*.c    text
+*.cpp  text
+*.h    text
+*.hlsl text
+*.hpp  text
+*.inl  text
+*.rc   text
+*.xaml text
+*.xml  text
+
+
+################################################################################
+# Treat the following files as binary files which means there is no line endings
+# conversion applied and changes are stored as binary patches.
+################################################################################
+
+*.gif binary
+*.jpg binary
+*.pdf binary
+*.png binary
