@@ -67,18 +67,9 @@ namespace winrt::SwapChainPanelBugRepro::implementation
     static constexpr float                   DipsPerInch = 96.0f;
     static constexpr DXGI_FORMAT             DxgiFormat  = DXGI_FORMAT_B8G8R8A8_UNORM;
     static constexpr DXGI_PRESENT_PARAMETERS PresentationParameters{};
-    static constexpr D2D1_FACTORY_OPTIONS    FactoryOptions
-    {
-#if defined(_DEBUG)
-      D2D1_DEBUG_LEVEL_INFORMATION
-#endif
-    };
+    static constexpr D2D1_FACTORY_OPTIONS    FactoryOptions{};
 
-    static constexpr UINT DeviceCreationFlags = D3D11_CREATE_DEVICE_BGRA_SUPPORT
-#if defined(_DEBUG)
-      | D3D11_CREATE_DEVICE_DEBUG
-#endif
-      ;
+    static constexpr UINT DeviceCreationFlags = D3D11_CREATE_DEVICE_BGRA_SUPPORT;
 
     static constexpr D3D_FEATURE_LEVEL FeatureLevels[] =
     {
