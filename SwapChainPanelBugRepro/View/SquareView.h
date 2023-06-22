@@ -13,6 +13,12 @@ namespace winrt::SwapChainPanelBugRepro::implementation
     std::unique_ptr<::SwapChainPanelBugRepro::SquareRenderer> _renderer;
 
     winrt::Microsoft::UI::Dispatching::DispatcherQueueController _renderLoopController{ nullptr };
+    winrt::Microsoft::UI::Dispatching::DispatcherQueueController _inputProcessingLoopController{ nullptr };
+
+    static constexpr auto _pointerSourceDevices =
+      winrt::Microsoft::UI::Input::InputPointerSourceDeviceKinds::Mouse |
+      winrt::Microsoft::UI::Input::InputPointerSourceDeviceKinds::Touch |
+      winrt::Microsoft::UI::Input::InputPointerSourceDeviceKinds::Pen;
 
     bool _isRenderLoopRunning = false;
 
@@ -23,7 +29,10 @@ namespace winrt::SwapChainPanelBugRepro::implementation
     winrt::Windows::Foundation::IAsyncAction BeforeUnloaded() override;
 
     void StartRenderingLoop();
+    void StartInputProcessingLoop();
     void Render();
+
+    void OnPointerPressed(winrt::Windows::Foundation::IInspectable const& sender, winrt::Microsoft::UI::Input::PointerEventArgs e);
   };
 }
 
